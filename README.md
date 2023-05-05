@@ -1,3 +1,3 @@
 # OpenGLTricks
-My OpenGl practise
+My OpenGl practise  
 x86 architecture setup
