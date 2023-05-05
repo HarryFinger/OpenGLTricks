@@ -105,6 +105,7 @@ int main(void)
 		"}\n";
 
 	unsigned int shader = CreateShader(vertexShader, fragmentShader);
+	// bind program
 	glUseProgram(shader);
 
 	//old OpenGL v.1.1 layout
@@ -129,6 +130,9 @@ int main(void)
 		/* Poll for and process events */
 		glfwPollEvents();
 	}
+
+	// delete program
+	glDeleteProgram(shader);
 
 	glfwTerminate();
 	return 0;
