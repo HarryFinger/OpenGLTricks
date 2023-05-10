@@ -69,7 +69,7 @@ int main(void)
 		fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
 	}
 
-	unsigned int arr[] =
+	unsigned int indices[] =
 	{
 		0, 1, 2,
 		2, 3, 0
@@ -95,7 +95,7 @@ int main(void)
 	unsigned int ib;
 	glGenBuffers(1, &ib);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ib);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(unsigned int), arr, GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(unsigned int), indices, GL_STATIC_DRAW);
 
 
 	std::string vertexShader =
